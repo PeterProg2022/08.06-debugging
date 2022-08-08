@@ -29,6 +29,12 @@ const server = new ApolloServer({
   },
 });
 
+
+// async function server_start() {
+//   console.log('server_start()')
+//   await server.start();
+// }
+
 async function installHandler(app) {
   const enableCors = (process.env.ENABLE_CORS || 'true') === 'true';
   console.log('CORS setting:', enableCors);
@@ -36,4 +42,4 @@ async function installHandler(app) {
   server.applyMiddleware({ app, path: '/graphql', cors: enableCors });
 }
 
-module.exports = { installHandler };
+module.exports = { installHandler/*, server_start*/ };
