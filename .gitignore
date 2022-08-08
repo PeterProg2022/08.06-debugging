@@ -1,4 +1,4 @@
 node_modules
 .env
 .idea/
-/ui/public/*.js
+ui/public/*.js
